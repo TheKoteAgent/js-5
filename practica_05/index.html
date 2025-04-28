@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS - DOM Практика</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="container py-5 px-4 bg-white my-5">
+      <h1 class="display-4 text-primary text-center mb-5 fw-bold">
+        DOM Практика
+      </h1>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 1</b></p>
+        <p class="mb-4">
+          Після натискання на кнопку b-1 функція присвоює блоку div-1 ширину
+          200px, висоту 90px і вивидить значення в блок.
+        </p>
+        <div id="div-1" class="block mb-3"></div>
+        <button type="button" id="b-1" class="btn btn-danger px-5 py-2">
+          <i class="fas fa-play me-2"></i>Task-1
+        </button>
+      </section>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 2</b></p>
+        <p class="mb-4">
+          За натискання кнопки b-2 запускайте функцію, яка робить toggle класу
+          bg-orange для блоку div-2.
+        </p>
+        <div id="div-2" class="block block-mod mb-3"></div>
+        <button type="button" id="b-2" class="btn btn-danger px-5 py-2">
+          <i class="fas fa-play me-2"></i>Task-2
+        </button>
+      </section>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 3</b></p>
+        <p class="mb-4">
+          За натисканням b-3 запускайте функцію, яка перевіряє наявність класу
+          .bg-orange у блоку div-3 (так, саме div-2 ). Результат – true або
+          false, виводьте у out-3.
+        </p>
+        <button type="button" id="b-3" class="btn btn-danger px-5 py-2 mb-3">
+          <i class="fas fa-play me-2"></i>Task-3
+        </button>
+        <div
+          id="out-3"
+          class="p-3 bg-light text-dark rounded-3 shadow-sm"
+        ></div>
+      </section>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 4</b></p>
+        <p class="mb-4">
+          За натискання кнопки b-4 запускайте функцію, яка надає блокам out-4
+          клас bg-red. Зверніть увага, що даних блоків більше одного, отже
+          потрібен цикл.
+        </p>
+        <div class="mb-3 d-flex gap-4 flex-wrap">
+          <div class="out-4">out-4</div>
+          <div class="out-4">out-4</div>
+          <div class="out-4">out-4</div>
+          <div class="out-4">out-4</div>
+          <div class="out-4">out-4</div>
+        </div>
+        <button type="button" id="b-4" class="btn btn-danger px-5 py-2">
+          <i class="fas fa-play me-2"></i>Task-4
+        </button>
+      </section>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 5</b></p>
+        <p class="mb-4">
+          Ускладнимо попередні завдання. За допомогою циклу повісимо на блоки
+          out-5 подію клік. По кліку має виконуватися функція. Функція повинна
+          робити toggle клас bg-blue тому out-5 на якому клікнули.
+        </p>
+        <div class="mb-3 d-flex gap-4 flex-wrap">
+          <div class="out-5">out-5</div>
+          <div class="out-5">out-5</div>
+          <div class="out-5">out-5</div>
+          <div class="out-5">out-5</div>
+          <div class="out-5">out-5</div>
+        </div>
+      </section>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 6</b></p>
+        <p class="mb-4">
+          Створіть HTML-сторінку з можливістю введення числового значення через
+          кнопки (більше, менше). Користувач не повинен мати можливість
+          друкувати текст або цифри. Число змінюється лише при натисканні на
+          кнопки.
+        </p>
+        <div id="counter" class="counter mb-3">
+          <input
+            type="text"
+            class="counter-input"
+            id="number"
+            value="0"
+            readonly
+          />
+          <button
+            type="button"
+            id="btn-increment"
+            class="counter-btn-increment"
+          >
+            +
+          </button>
+          <button
+            type="button"
+            id="btn-decrement"
+            class="counter-btn-decrement"
+          >
+            -
+          </button>
+        </div>
+      </section>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 7</b></p>
+        <p class="mb-4">
+          Створіть HTML-сторінку з кнопкою, натисканням на яку додаються
+          кольорові блоки на сторінку. Блок має видалятися зі сторінки по кліку
+          на сам блок.
+        </p>
+        <div class="block-color mb-3">
+          <div class="block-color__items" id="block-color">
+            <!-- Color blocks will be added here by JavaScript -->
+          </div>
+          <button id="btn-color" type="button" class="btn btn-warning">
+            <i class="fas fa-plus me-2"></i>Add Block
+          </button>
+        </div>
+      </section>
+
+      <section class="bg-dark text-white p-4 rounded-3 mb-5">
+        <p class="h3 mb-3"><i class="fas fa-tasks me-2"></i><b>Task 8</b></p>
+        <p class="mb-4">
+          Створіть HTML-сторінку з текстом і палітрою кольорів. Натискаючи на
+          колір палітри, колір тексту має змінюватися на обраний. Для вказівки,
+          якій клітинці відповідає той чи інший колір, можна скористатися
+          атрибутом data-color у кожній клітинці, а потім, за допомогою JS,
+          отримувати необхідний колір із цього атрибуту.
+        </p>
+        <div class="mb-4">
+          <img
+            src="img/Screenshot_4.png"
+            alt="Color Palette Example"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="my-4">
+          <div class="color-palette">
+            <div
+              class="color-palette__item"
+              data-color="#dca054"
+              style="background-color: rgb(220, 160, 84)"
+              title="Orange"
+            ></div>
+            <div
+              class="color-palette__item"
+              data-color="#4287f5"
+              style="background-color: rgb(66, 135, 245)"
+              title="Blue"
+            ></div>
+            <div
+              class="color-palette__item"
+              data-color="#42f551"
+              style="background-color: rgb(66, 245, 81)"
+              title="Green"
+            ></div>
+            <div
+              class="color-palette__item"
+              data-color="#f54242"
+              style="background-color: rgb(245, 66, 66)"
+              title="Red"
+            ></div>
+            <div
+              class="color-palette__item"
+              data-color="#f542f2"
+              style="background-color: rgb(245, 66, 242)"
+              title="Pink"
+            ></div>
+          </div>
+          <p class="text-color">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            sint dolorem maiores tempora dicta enim pariatur minima, nobis cum
+            facere consectetur dignissimos culpa laborum vitae repudiandae
+            fugiat, tempore dolor voluptates neque? Quasi culpa doloremque
+            itaque commodi? Sequi corrupti atque iusto eos impedit ratione, quia
+            consequatur, esse debitis sint placeat quam eaque quidem expedita ut
+            harum dicta unde, velit possimus minus ea quae! Eum ullam cumque
+            culpa esse. Repellat, quo numquam quibusdam aut asperiores iure
+            officia, facere obcaecati officiis voluptatem dicta assumenda
+            eveniet saepe excepturi. Sunt accusantium maiores tenetur cumque
+            soluta ipsum autem eum laudantium vero nulla dolor porro impedit
+            explicabo.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">DOM Практика &copy; 2025</p>
+    </footer>
+  </body>
+</html>
